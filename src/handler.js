@@ -41,6 +41,14 @@ const addNoteHandler = (request, h) => {
     .code(500);
 };
 
+const getAllNotesHandler = () => ({
+  status: 'success',
+  data: {
+    notes,
+  },
+});
+
 module.exports = {
   addNoteHandler,
+  getAllNotesHandler,
 };
