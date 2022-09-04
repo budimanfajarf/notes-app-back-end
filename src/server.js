@@ -1,1 +1,15 @@
-// console.log('Hello, we will develop a RESTful API');
+const Hapi = require('@hapi/hapi');
+
+const init = async () => {
+  const server = Hapi.server({
+    port: 5000,
+    host: 'localhost',
+  });
+
+  await server.start();
+
+  // eslint-disable-next-line no-console
+  console.log(`Server running on ${server.info.uri}`);
+};
+
+init();
